@@ -32,13 +32,16 @@ import Form from "./Form";
         });
         setCharacter(updated);
     }
+    function updateList(person){
+        setCharacter([...characters,person]);
+    }
     return (
       <div className="container">
         <Table 
         characterData={characters}
         removeCharacter = {removeOneCharacter} 
         />
-        <Form/>
+        <Form handleSubmit = {updateList}/>
       </div>
     );
   }
