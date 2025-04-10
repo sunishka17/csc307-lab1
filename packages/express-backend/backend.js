@@ -77,6 +77,7 @@ app.get("/users", (req, res) => {
 });
 
 app.post("/users", (req, res) => {
+    console.log("called");
     const userToAdd = req.body;
     addUser(userToAdd);
     res.send();
